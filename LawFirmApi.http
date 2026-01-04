@@ -1,0 +1,6 @@
+@LawFirmApi_HostAddress = http://localhost:5216
+
+GET {{LawFirmApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
