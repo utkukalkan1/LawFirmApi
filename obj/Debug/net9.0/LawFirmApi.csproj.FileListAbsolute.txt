@@ -160,3 +160,4 @@ C:\Users\utkuk\LawFirmApi\obj\Debug\net9.0\LawFirmApi.genruntimeconfig.cache
 C:\Users\utkuk\LawFirmApi\obj\Debug\net9.0\ref\LawFirmApi.dll
 C:\Users\utkuk\LawFirmApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\utkuk\LawFirmApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\utkuk\LawFirmApi\obj\Debug\net9.0\LawFirmApi.sourcelink.json
