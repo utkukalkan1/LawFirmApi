@@ -1,6 +1,7 @@
 ﻿import { useEffect, useState } from "react";
-import { http } from "../shared/api/http";
 import { Link } from "react-router-dom";
+
+import { http } from "../shared/api/http";
 
 const Articles = () => {
     const [articles, setArticles] = useState([]);
@@ -21,60 +22,62 @@ const Articles = () => {
     }, []);
 
     return (
-        <div className="bg-white font-sans text-slate-800">
+        <div className="bg-slate-950 text-white">
+            <section className="border-b border-white/10">
+                <div className="max-w-6xl mx-auto px-6 py-20">
+                    <p className="text-xs uppercase tracking-[0.5em] text-amber-200/70 mb-4">Makaleler</p>
+                    <h1 className="text-4xl md:text-5xl font-semibold mb-4">Hukuki içgörüler ve pratik rehberler.</h1>
+                    <p className="text-lg text-slate-300 max-w-2xl">
+                        Güncel yargı kararları ve mevzuat değişikliklerine dair derinlemesine analizlerimizi keşfedin.
+                    </p>
+                </div>
+            </section>
 
-            {/* Üst Başlık */}
-            <div className="bg-[#3b4b61] py-12 text-center text-white">
-                <h1 className="text-4xl font-serif tracking-widest uppercase">Hukuki Makaleler</h1>
-                <p className="mt-2 text-slate-300 font-light tracking-wider">GÜNCEL YARGI KARARLARI VE HUKUKİ İNCELEMELER</p>
-            </div>
-
-            <div className="max-w-4xl mx-auto px-6 py-16">
-
+            <section className="max-w-6xl mx-auto px-6 py-20">
                 {loading ? (
-                    <p className="text-center text-slate-500">Makaleler yükleniyor...</p>
+                    <p className="text-center text-slate-400">Makaleler yükleniyor...</p>
                 ) : articles.length === 0 ? (
-                    <p className="text-center text-slate-500">Henüz makale bulunmuyor.</p>
+                    <p className="text-center text-slate-400">Henüz makale bulunmuyor.</p>
                 ) : (
-                    <div className="space-y-12">
+                    <div className="grid gap-8 md:grid-cols-2">
                         {articles.map((article) => (
-                            <div key={article.id} className="flex flex-col md:flex-row gap-8 border-b border-slate-200 pb-12 last:border-0">
-                                {/* Varsa Resim (Mobil uyumlu) */}
+                            <article
+                                key={article.id}
+                                className="group flex flex-col gap-6 rounded-2xl border border-white/10 bg-slate-900/60 p-6 transition duration-300 hover:-translate-y-2 hover:border-amber-300/60"
+                            >
                                 {article.imageUrl && (
-                                    <div className="w-full md:w-64 h-48 flex-shrink-0">
+                                    <div className="overflow-hidden rounded-xl">
                                         <img
                                             src={article.imageUrl}
                                             alt={article.title}
-                                            className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition duration-500"
+                                            className="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
                                         />
                                     </div>
                                 )}
 
-                                {/* İçerik */}
-                                <div className="flex-1">
-                                    <h2 className="text-2xl font-bold font-serif text-[#3b4b61] mb-3 hover:text-blue-800 transition">
+                                <div className="flex-1 space-y-4">
+                                    <div className="text-xs uppercase tracking-[0.3em] text-slate-400">
+                                        {new Date(article.createdDate).toLocaleDateString("tr-TR")}
+                                    </div>
+                                    <h2 className="text-2xl font-semibold text-white group-hover:text-amber-200 transition">
                                         <Link to={`/article/${article.id}`}>{article.title}</Link>
                                     </h2>
-                                    <div className="text-xs text-slate-400 mb-4 uppercase tracking-wider font-bold">
-                                        {new Date(article.createdDate).toLocaleDateString('tr-TR')}
-                                    </div>
-                                    <p className="text-slate-600 leading-relaxed mb-4 line-clamp-3">
+                                    <p className="text-sm text-slate-300 leading-relaxed line-clamp-3">
                                         {article.summary}
                                     </p>
-                                    <Link
-                                        to={`/article/${article.id}`}
-                                        className="inline-block border-b border-[#3b4b61] text-[#3b4b61] font-bold text-sm hover:text-blue-800 hover:border-blue-800 transition pb-1"
-                                    >
-                                        DEVAMINI OKU &rarr;
-                                    </Link>
                                 </div>
-                            </div>
+
+                                <Link
+                                    to={`/article/${article.id}`}
+                                    className="text-xs uppercase tracking-[0.3em] text-amber-200/80 hover:text-amber-200 transition"
+                                >
+                                    Devamını Oku →
+                                </Link>
+                            </article>
                         ))}
                     </div>
                 )}
-
-            </div>
-
+            </section>
         </div>
     );
 };
