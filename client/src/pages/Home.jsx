@@ -1,6 +1,7 @@
 ﻿import { useEffect, useState } from "react";
-import { http } from "../shared/api/http";
 import { Link } from "react-router-dom";
+
+import { http } from "../shared/api/http";
 
 const Home = () => {
     const [latestArticles, setLatestArticles] = useState([]);
@@ -18,85 +19,157 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="bg-white text-law-text font-serif">
-
-            {/* 1. BÖLÜM: AÇIKLAMA METNİ (Text Şeklinde) */}
-            <div className="max-w-5xl mx-auto px-6 py-16">
-                {/* Başlık */}
-                <div className="border-b-2 border-gray-200 pb-4 mb-8">
-                    <h1 className="text-3xl font-bold text-law-blue">Eser Hukuk ve Danışmanlık</h1>
+        <div className="bg-slate-950 text-white">
+            <section className="relative overflow-hidden">
+                <div className="absolute inset-0">
+                    <img
+                        src="https://images.unsplash.com/photo-1453945619913-79ec89a82c51?auto=format&fit=crop&w=1800&q=80"
+                        alt="Eser Hukuk"
+                        className="h-full w-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-slate-950/70"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent"></div>
                 </div>
 
-                {/* Metin İçeriği (Justified - İki yana yaslı ve Ciddi) */}
-                <div className="text-lg leading-loose text-gray-700 text-justify space-y-6">
-                    <p>
-                        Hukuk büromuz, İstanbul merkezli olup, kurulduğu günden bu yana müvekkillerine şeffaf,
-                        sonuç odaklı ve güvenilir bir hukuki danışmanlık hizmeti sunmayı ilke edinmiştir.
-                        Hukukun üstünlüğü prensibiyle, her dosyayı titizlikle inceliyor ve en güncel yargı
-                        kararları ışığında stratejiler geliştiriyoruz.
-                    </p>
-                    <p>
-                        Ceza Hukuku, Aile Hukuku, Gayrimenkul Hukuku ve Ticaret Hukuku başta olmak üzere;
-                        hem bireysel hem de kurumsal müvekkillerimizin hukuki sorunlarına etkin çözümler üretmekteyiz.
-                        Amacımız, karmaşık hukuki süreçleri müvekkillerimiz adına sadeleştirerek hak kaybı yaşanmasının önüne geçmektir.
-                    </p>
-                </div>
-            </div>
-
-            {/* 2. BÖLÜM: MAKALELER SIRALANIYOR */}
-            <div className="bg-[#fcfcfc] border-t border-gray-200 py-16">
-                <div className="max-w-5xl mx-auto px-6">
-
-                    {/* Bölüm Başlığı */}
-                    <h2 className="text-2xl font-bold text-law-blue mb-10 flex items-center">
-                        <span className="text-3xl mr-3">⚖️</span> Güncel Hukuki Makaleler
-                    </h2>
-
-                    {/* Makale Listesi */}
-                    <div className="space-y-10">
-                        {latestArticles.length === 0 ? (
-                            <p className="text-gray-500">Makaleler yükleniyor...</p>
-                        ) : (
-                            latestArticles.map((article) => (
-                                <div key={article.id} className="group">
-                                    {/* Makale Başlığı */}
-                                    <h3 className="text-xl font-bold text-law-blue mb-2 group-hover:underline">
-                                        <Link to={`/article/${article.id}`}>
-                                            {article.title}
-                                        </Link>
-                                    </h3>
-
-                                    {/* Tarih */}
-                                    <div className="text-xs text-gray-400 mb-3 font-sans font-bold uppercase tracking-wider">
-                                        {new Date(article.createdDate).toLocaleDateString('tr-TR')}
-                                    </div>
-
-                                    {/* Özet */}
-                                    <p className="text-gray-600 leading-relaxed text-justify mb-3">
-                                        {article.summary}
-                                    </p>
-
-                                    {/* Devamını Oku */}
-                                    <Link to={`/article/${article.id}`} className="text-sm font-sans font-bold text-[#3b4b61] hover:text-black border-b border-[#3b4b61] pb-0.5">
-                                        DEVAMINI OKU &rarr;
-                                    </Link>
+                <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32 animate-fade-in">
+                    <div className="max-w-2xl space-y-8">
+                        <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/40 px-4 py-2 text-xs uppercase tracking-[0.4em] text-amber-200/80">
+                            Güven • Şeffaflık • Sonuç Odaklılık
+                        </div>
+                        <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+                            Hukuki süreçlerde stratejik rehberlik sunan butik bir hukuk bürosu.
+                        </h1>
+                        <p className="text-lg text-slate-200 leading-relaxed">
+                            İstanbul merkezli ekibimiz; bireysel ve kurumsal müvekkiller için hızlı, anlaşılır ve
+                            güven veren çözümler üretir. Her dosyada detaylı analiz, güçlü iletişim ve şeffaf bir
+                            süreç yönetimi sunarız.
+                        </p>
+                        <div className="flex flex-wrap items-center gap-4">
+                            <Link
+                                to="/contact"
+                                className="rounded-full bg-amber-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-amber-300/30"
+                            >
+                                Hemen Görüşelim
+                            </Link>
+                            <Link
+                                to="/articles"
+                                className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-amber-300 hover:text-amber-200"
+                            >
+                                Makaleleri İncele
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-10 text-sm text-slate-300">
+                            {[
+                                { label: "Yıllık Tecrübe", value: "18+" },
+                                { label: "Aktif Dosya", value: "240+" },
+                                { label: "Başarı Oranı", value: "%92" },
+                                { label: "Müşteri Memnuniyeti", value: "4.9/5" }
+                            ].map((item) => (
+                                <div key={item.label} className="space-y-2">
+                                    <div className="text-2xl font-semibold text-white">{item.value}</div>
+                                    <div className="text-xs uppercase tracking-[0.3em]">{item.label}</div>
                                 </div>
-                            ))
-                        )}
+                            ))}
+                        </div>
                     </div>
+                </div>
+            </section>
 
-                    {/* Tümünü Gör Butonu */}
-                    <div className="mt-12 text-center">
-                        <Link to="/articles" className="inline-block border border-law-blue text-law-blue px-6 py-3 rounded hover:bg-law-blue hover:text-white transition font-sans font-bold text-sm uppercase">
-                            Tüm Makaleleri İncele
+            <section className="bg-slate-900 border-y border-white/10">
+                <div className="max-w-6xl mx-auto px-6 py-20">
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {[
+                            {
+                                title: "Kişiye Özel Strateji",
+                                text: "Her dava için özelleştirilmiş bir yol haritası çıkarır, hukuki süreci anlaşılır şekilde yönetiriz."
+                            },
+                            {
+                                title: "Şeffaf İletişim",
+                                text: "Tüm süreç boyunca erişilebilir olur, düzenli bilgilendirme ve raporlama sağlarız."
+                            },
+                            {
+                                title: "Hızlı Geri Dönüş",
+                                text: "Ön değerlendirme taleplerine 24 saat içinde yanıt vererek süreci hızlandırırız."
+                            }
+                        ].map((item) => (
+                            <div
+                                key={item.title}
+                                className="rounded-2xl border border-white/10 bg-slate-950/60 p-6 shadow-lg shadow-slate-950/30 transition duration-300 hover:-translate-y-2 hover:border-amber-300/60"
+                            >
+                                <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
+                                <p className="text-sm text-slate-300 leading-relaxed">{item.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bg-slate-950">
+                <div className="max-w-6xl mx-auto px-6 py-20">
+                    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+                        <div className="space-y-3">
+                            <p className="text-xs uppercase tracking-[0.4em] text-amber-200/70">Güncel İçerikler</p>
+                            <h2 className="text-3xl font-semibold">Hukuki Makaleler</h2>
+                            <p className="text-slate-300 max-w-xl">
+                                Güncel içtihatlar, mevzuat değişiklikleri ve pratik rehberlerimizle süreci daha
+                                kolay takip edin.
+                            </p>
+                        </div>
+                        <Link
+                            to="/articles"
+                            className="rounded-full border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.4em] text-white/80 transition hover:border-amber-300 hover:text-amber-200"
+                        >
+                            Tüm Makaleler
                         </Link>
                     </div>
 
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {latestArticles.length === 0 ? (
+                            <div className="col-span-full text-slate-400">Makaleler yükleniyor...</div>
+                        ) : (
+                            latestArticles.map((article) => (
+                                <article
+                                    key={article.id}
+                                    className="group rounded-2xl border border-white/10 bg-slate-900/60 p-6 transition duration-300 hover:-translate-y-2 hover:border-amber-300/60"
+                                >
+                                    <p className="text-xs uppercase tracking-[0.3em] text-slate-400">
+                                        {new Date(article.createdDate).toLocaleDateString("tr-TR")}
+                                    </p>
+                                    <h3 className="mt-4 text-xl font-semibold text-white group-hover:text-amber-200 transition">
+                                        <Link to={`/article/${article.id}`}>{article.title}</Link>
+                                    </h3>
+                                    <p className="mt-3 text-sm text-slate-300 leading-relaxed line-clamp-4">
+                                        {article.summary}
+                                    </p>
+                                    <Link
+                                        to={`/article/${article.id}`}
+                                        className="mt-6 inline-flex items-center text-xs uppercase tracking-[0.3em] text-amber-200/80 hover:text-amber-200 transition"
+                                    >
+                                        Devamını Oku →
+                                    </Link>
+                                </article>
+                            ))
+                        )}
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            {/* FOOTER */}
-
+            <section className="bg-gradient-to-r from-amber-200 via-amber-300 to-amber-200 text-slate-900">
+                <div className="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="space-y-2">
+                        <h2 className="text-3xl font-semibold">İlk görüşmeyi planlayalım.</h2>
+                        <p className="text-sm text-slate-700">
+                            Dosyanız için hızlı bir ön değerlendirme yapmak ve yol haritası çıkarmak için buradayız.
+                        </p>
+                    </div>
+                    <Link
+                        to="/contact"
+                        className="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-1 hover:shadow-xl"
+                    >
+                        İletişime Geç
+                    </Link>
+                </div>
+            </section>
         </div>
     );
 };
