@@ -1,55 +1,78 @@
 const About = () => {
     return (
-        <div className="bg-white font-sans text-slate-800">
+        <div className="bg-slate-950 text-white">
+            <section className="relative overflow-hidden border-b border-white/10">
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 animate-fade-in-up">
+                    <p className="text-xs uppercase tracking-[0.32em] sm:tracking-[0.5em] text-amber-200/70 mb-4">Hakkımızda</p>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">Tecrübe ve güven üzerine kurulu bir ekip.</h1>
+                    <p className="text-lg text-slate-300 max-w-2xl leading-relaxed">
+                        Müvekkillerimizin ihtiyaçlarına göre özelleştirilmiş, hızlı ve şeffaf bir danışmanlık süreci sunarız.
+                    </p>
+                </div>
+            </section>
 
-            {/* Üst Başlık */}
-            <div className="bg-[#3b4b61] py-12 text-center text-white">
-                <h1 className="text-4xl font-serif tracking-widest uppercase">Hakkımızda</h1>
-                <p className="mt-2 text-slate-300 font-light tracking-wider">TECRÜBE • GÜVEN • ADALET</p>
-            </div>
-
-            <div className="max-w-6xl mx-auto px-6 py-16">
-                <div className="grid md:grid-cols-2 gap-16 items-start">
-
-                    {/* Sol Taraf: Görsel */}
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="relative">
-                        <div className="absolute -inset-4 border-2 border-[#3b4b61] opacity-20"></div>
+                        <div className="absolute -inset-4 border border-amber-300/20 rounded-3xl"></div>
                         <img
-                            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Avukat Ofisi"
-                            className="relative shadow-2xl w-full h-[500px] object-cover grayscale-[20%]"
+                            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80"
+                            alt="Ekip çalışması"
+                            className="relative rounded-3xl shadow-2xl w-full h-[320px] sm:h-[420px] md:h-[480px] object-cover"
                         />
                     </div>
 
-                    {/* Sağ Taraf: Yazı */}
                     <div className="space-y-6">
-                        <h2 className="text-3xl font-serif text-[#3b4b61] font-bold border-b-2 border-slate-200 pb-4">
-                            Biz Kimiz?
-                        </h2>
-
-                        <p className="text-lg leading-relaxed font-serif text-slate-700 text-justify">
-                            Hukuk Büromuz, müvekkillerine en yüksek kalitede hukuki danışmanlık ve avukatlık hizmeti sunmak amacıyla İstanbul'da kurulmuştur.
-                            Kuruluşumuzdan bu yana, hukukun üstünlüğü ilkesini benimseyerek, müvekkillerimizin hak ve menfaatlerini en etkin şekilde korumayı ilke edindik.
+                        <h2 className="text-3xl font-semibold">Biz kimiz?</h2>
+                        <p className="text-slate-300 leading-relaxed">
+                            Eser Hukuk ve Danışmanlık, İstanbul’da kurulan ve farklı hukuk alanlarında uzmanlaşmış
+                            bir ekipten oluşur. Her dosyada hızlı analiz, doğru strateji ve güçlü temsil anlayışıyla
+                            hareket ederiz.
                         </p>
-
-                        <p className="text-lg leading-relaxed font-serif text-slate-700 text-justify">
-                            Ceza Hukuku, Aile Hukuku, Gayrimenkul Hukuku ve Ticaret Hukuku başta olmak üzere geniş bir yelpazede hizmet vermekteyiz.
-                            Her dosyayı titizlikle inceliyor, güncel Yargıtay kararları ve mevzuat değişiklikleri ışığında stratejik çözümler üretiyoruz.
+                        <p className="text-slate-300 leading-relaxed">
+                            Ceza, aile, gayrimenkul ve ticaret hukuku başta olmak üzere müvekkillerimizin haklarını
+                            korumaya odaklanırız. Süreç boyunca açık iletişim ve düzenli bilgilendirme sağlarız.
                         </p>
-
-                        <div className="bg-slate-50 p-6 border-l-4 border-[#3b4b61] mt-8">
-                            <p className="italic text-slate-600 font-serif">
-                                "Adalet, mülkün temelidir. Bizim görevimiz ise bu temeli her dava ve danışmanlık sürecinde sağlam tutmaktır."
-                            </p>
-                            <div className="mt-4 font-bold text-[#3b4b61]">— Eser Hukuk ve Danışmanlık</div>
+                        <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 text-sm text-slate-300">
+                            “Adaletin tesisi için her dosyada titizlikle çalışır, müvekkillerimizin güvenini önceleyen
+                            bir hizmet sunarız.”
+                            <div className="mt-4 text-xs uppercase tracking-[0.3em] text-amber-200/70">
+                                — Eser Hukuk ve Danışmanlık
+                            </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
+            </section>
 
-            {/* Footer */}
-
+            <section className="bg-slate-900 border-y border-white/10">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
+                    <div className="grid md:grid-cols-3 gap-5 sm:gap-8">
+                        {[
+                            {
+                                title: "Stratejik Yaklaşım",
+                                text: "Her dosya için planlı, ölçülebilir ve öngörülebilir bir yol haritası sunarız."
+                            },
+                            {
+                                title: "Ekip Gücü",
+                                text: "Alanında deneyimli hukukçulardan oluşan ekibimizle birlikte hareket ederiz."
+                            },
+                            {
+                                title: "Müvekkil Deneyimi",
+                                text: "Süreç boyunca erişilebilir olur, süreci şeffaf ve anlaşılır kurgularız."
+                            }
+                        ].map((item) => (
+                            <div
+                                key={item.title}
+                                className="rounded-2xl border border-white/10 bg-slate-950/70 p-6 transition duration-300 hover:-translate-y-2 hover:border-amber-300/60"
+                            >
+                                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                                <p className="text-sm text-slate-300 leading-relaxed">{item.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
