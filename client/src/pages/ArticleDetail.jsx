@@ -7,15 +7,28 @@ const BULLET_SEPARATORS = /\s*[•◆♦🔹▪️◾◽✔✅📌🎯🔍]\s*/g
 
 const hasHtmlTags = (text) => /<[^>]+>/.test(text);
 
-const getListItemsFromContent = (content) => {
-    if (!content || hasHtmlTags(content)) {
-        return [];
-    }
+const hasNativeListMarkup = (text) => /<(ul|ol|li)\b/i.test(text ?? "");
 
-    const normalized = content
+const normalizeContentForSplit = (content) =>
+    content
         .replace(/\r\n/g, "\n")
         .replace(/\n{2,}/g, "\n")
         .trim();
+
+const convertHtmlToPlainText = (html) =>
+    html
+        .replace(/<br\s*\/?>/gi, "\n")
+        .replace(/<\/p>/gi, "\n")
+        .replace(/<\/div>/gi, "\n")
+        .replace(/<\/h[1-6]>/gi, "\n")
+        .replace(/<[^>]+>/g, " ")
+        .replace(/&nbsp;/gi, " ")
+        .replace(/&amp;/gi, "&")
+        .replace(/&quot;/gi, '"')
+        .replace(/&#39;/gi, "'");
+
+const splitIntoListItems = (text) => {
+    const normalized = normalizeContentForSplit(text);
 
     const lineBasedItems = normalized
         .split("\n")
@@ -32,6 +45,22 @@ const getListItemsFromContent = (content) => {
         .filter(Boolean);
 
     return symbolBasedItems.length > 1 ? symbolBasedItems : [];
+};
+
+const getListItemsFromContent = (content) => {
+    if (!content) {
+        return [];
+    }
+
+    if (hasHtmlTags(content)) {
+        if (hasNativeListMarkup(content)) {
+            return [];
+        }
+
+        return splitIntoListItems(convertHtmlToPlainText(content));
+    }
+
+    return splitIntoListItems(content);
 };
 
 const ArticleDetail = () => {
