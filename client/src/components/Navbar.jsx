@@ -30,10 +30,10 @@ const Navbar = () => {
                             </div>
                             <div className="flex flex-col leading-tight">
                                 <span className="text-lg font-semibold tracking-[0.2em] uppercase">
-                                    Eser Hukuk
+                                    Eser Hukuk ve Danışmanlık
                                 </span>
                                 <span className="text-[10px] text-amber-200/70 tracking-[0.3em] uppercase">
-                                    Hukuk & Danışmanlık
+                                    Hukuk & Danışmanlık Hizmetleri
                                 </span>
                             </div>
                         </Link>
