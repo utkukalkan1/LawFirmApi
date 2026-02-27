@@ -21,8 +21,8 @@ const Navbar = () => {
             <div className="hidden md:block border-b border-white/10 text-xs text-slate-300">
                 <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
                     <div className="flex items-center gap-6">
-                        <span>📞 +90 (552) 821 17 17</span>
-                        <span>📍 Kağıthane / İstanbul</span>
+                        <span>📞 +90 (546) 979 61 12</span>
+                        <span>📍 Şişli / İstanbul</span>
                     </div>
                     <div className="flex items-center gap-4 text-slate-400">
                         <span>LinkedIn</span>

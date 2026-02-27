@@ -54,14 +54,14 @@ const Contact = () => {
                                 <span className="text-amber-200">📍</span>
                                 <div>
                                     <p className="text-white font-medium">Adres</p>
-                                    <p>Kağıthane Mah. Büyükdere Cad. No:123, İstanbul</p>
+                                    <p>Şişli / İstanbul</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
                                 <span className="text-amber-200">📞</span>
                                 <div>
                                     <p className="text-white font-medium">Telefon</p>
-                                    <p>+90 (552) 821 17 17</p>
+                                    <p>+90 (546) 979 61 12</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
