@@ -5,7 +5,7 @@ const navLinks = [
     { to: "/", label: "Anasayfa" },
     { to: "/about", label: "Hakkımızda" },
     { to: "/articles", label: "Makaleler" },
-    { to: "/contact", label: "İletişim" }
+    { to: "/contact", label: "İLETİŞİM" }
 ];
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
                     <div className="flex items-center gap-6">
                         <span>📞 +90 (546) 979 61 12</span>
-                        <span>📍 Şişli / İstanbul</span>
+                        <span>📍 İzzet Paşa, Yeni Yol Cd., 34387 Şişli/İstanbul</span>
                     </div>
                     <div className="flex items-center gap-4 text-slate-400">
                         <span>LinkedIn</span>
@@ -38,7 +38,7 @@ const Navbar = () => {
                         <Link to="/" className="flex items-center gap-3 group min-w-0">
                             <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-amber-300/70 overflow-hidden shrink-0">
                                 <img
-                                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                    src="/public/logo.jpeg"
                                     alt="Avukat"
                                     className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
                                 />
@@ -72,13 +72,6 @@ const Navbar = () => {
                             >
                                 Online Randevu
                             </Link>
-                            <Link
-                                to="/login"
-                                className="text-slate-400 hover:text-white text-sm transition"
-                                title="Admin Girişi"
-                            >
-                                🔒
-                            </Link>
                         </div>
 
                         <button
@@ -110,12 +103,6 @@ const Navbar = () => {
                                 className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-amber-300 px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate-900"
                             >
                                 Online Randevu
-                            </Link>
-                            <Link
-                                to="/login"
-                                className="mt-3 block text-center text-xs uppercase tracking-[0.2em] text-slate-400"
-                            >
-                                Admin Girişi
                             </Link>
                         </div>
                     )}

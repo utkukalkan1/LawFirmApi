@@ -31,11 +31,10 @@ const Contact = () => {
         <div className="bg-slate-950 text-white">
             <section className="border-b border-white/10">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
-                    <p className="text-xs uppercase tracking-[0.32em] sm:tracking-[0.5em] text-amber-200/70 mb-4">İletişim</p>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">Dosyanız için hızlı bir değerlendirme yapalım.</h1>
+                    <p className="text-xs uppercase tracking-[0.32em] sm:tracking-[0.5em] text-amber-200/70 mb-4">İLETİŞİM</p>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">Hukuki problemleriniz için hemen iletişime geçin!</h1>
                     <p className="text-lg text-slate-300 max-w-2xl">
-                        Sorunuzu bize iletin, 24 saat içinde geri dönüş sağlayalım. Ofisimize gelmek isterseniz
-                        tüm detaylar aşağıda.
+                        İstanbul Eser Hukuk ve Danışmanlık’a sorunuzu iletin, derhal geri dönüş sağlayalım. Yüz yüze görüşmeler ve detaylar için İstanbul avukatın numarası bu sayfada.
                     </p>
                 </div>
             </section>
@@ -45,8 +44,7 @@ const Contact = () => {
                     <div className="space-y-6 rounded-3xl border border-white/10 bg-slate-900/60 p-6 sm:p-8">
                         <h2 className="text-2xl font-semibold">Ofis Bilgileri</h2>
                         <p className="text-sm text-slate-300 leading-relaxed">
-                            Bizi arayabilir, ofisimize uğrayabilir ya da form üzerinden mesaj gönderebilirsiniz.
-                            İlk görüşmede süreç planlaması yapıyor ve aksiyon adımlarını belirliyoruz.
+                            Eser Hukuk ve Danışmanlık ile iletişime geçmek için bizi arayabilir, İstanbul’daki hukuk büromuzu ziyaret edebilir veya iletişim formu üzerinden mesaj gönderebilirsiniz. İlk görüşmede hukuki süreciniz değerlendirilerek izlenecek yol ve gerekli hukuki adımlar hakkında bilgilendirme yapılmaktadır.
                         </p>
 
                         <div className="space-y-4 text-sm text-slate-300">
@@ -54,7 +52,7 @@ const Contact = () => {
                                 <span className="text-amber-200">📍</span>
                                 <div>
                                     <p className="text-white font-medium">Adres</p>
-                                    <p>Şişli / İstanbul</p>
+                                    <p>İzzet Paşa, Yeni Yol Cd., 34387 Şişli/İstanbul</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
@@ -74,7 +72,7 @@ const Contact = () => {
                         </div>
 
                         <div className="rounded-2xl border border-amber-300/30 bg-slate-950/70 p-6 text-xs uppercase tracking-[0.3em] text-amber-200/80">
-                            Hafta içi 09:00 - 19:00 arası hizmet veriyoruz.
+                            Hafta İÇİ 09:00 - 19:00 arası HİZMET VERİYORUZ.
                         </div>
                     </div>
 

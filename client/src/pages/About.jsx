@@ -5,9 +5,9 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 animate-fade-in-up">
                     <p className="text-xs uppercase tracking-[0.32em] sm:tracking-[0.5em] text-amber-200/70 mb-4">Hakkımızda</p>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">Tecrübe ve güven üzerine kurulu bir ekip.</h1>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">İstanbul’da ve Türkiye’nin her yerinde; tecrübe, güven ve iletişime odaklı avukatlar.</h1>
                     <p className="text-lg text-slate-300 max-w-2xl leading-relaxed">
-                        Müvekkillerimizin ihtiyaçlarına göre özelleştirilmiş, hızlı ve şeffaf bir danışmanlık süreci sunarız.
+                        Uzmanlaştığımız alanlarda, müvekkillerimizin ihtiyaçları doğrultusunda, özel bir avukatlık hizmeti sunuyoruz.
                     </p>
                 </div>
             </section>
@@ -24,15 +24,12 @@ const About = () => {
                     </div>
 
                     <div className="space-y-6">
-                        <h2 className="text-3xl font-semibold">Biz kimiz?</h2>
+                        <h2 className="text-3xl font-semibold">ESER HUKUK VE DANIŞMANLIK - İSTANBUL AVUKAT - İSTANBUL HUKUK VE DANIŞMANLIK</h2>
                         <p className="text-slate-300 leading-relaxed">
-                            Eser Hukuk ve Danışmanlık, İstanbul’da kurulan ve farklı hukuk alanlarında uzmanlaşmış
-                            bir ekipten oluşur. Her dosyada hızlı analiz, doğru strateji ve güçlü temsil anlayışıyla
-                            hareket ederiz.
+                            Eser Hukuk ve Danışmanlık, İstanbul merkezli bir hukuk bürosu olarak bireysel ve kurumsal müvekkillerine farklı hukuk alanlarında profesyonel danışmanlık ve dava takibi hizmeti sunmaktadır. Büromuz özellikle malpraktis davaları ve sağlık hukuku uyuşmazlıkları, iş hukuku davaları, ceza hukuku davaları ile marka ve patent hukuku alanlarında uzmanlaşmış olup müvekkillerinin haklarını etkili ve çözüm odaklı bir yaklaşımla korumayı hedeflemektedir. 
                         </p>
                         <p className="text-slate-300 leading-relaxed">
-                            Ceza, aile, gayrimenkul ve ticaret hukuku başta olmak üzere müvekkillerimizin haklarını
-                            korumaya odaklanırız. Süreç boyunca açık iletişim ve düzenli bilgilendirme sağlarız.
+                            İstanbul avukatlık hizmetleri kapsamında faaliyet gösteren Eser Hukuk ve Danışmanlık, tıbbi malpraktis davaları, işçi alacakları ve iş hukuku uyuşmazlıkları, ceza davaları ile marka ve patent hukukuna ilişkin ihtilaflarda kapsamlı hukuki destek sağlamaktadır. Deneyimli avukat kadromuz, hukuki süreçlerin her aşamasında müvekkillerine stratejik danışmanlık sunarak hak kayıplarının önlenmesini amaçlamakta ve İstanbul başta olmak üzere Türkiye genelinde dava ve danışmanlık hizmeti vermektedir.
                         </p>
                         <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 text-sm text-slate-300">
                             “Adaletin tesisi için her dosyada titizlikle çalışır, müvekkillerimizin güvenini önceleyen
@@ -50,16 +47,16 @@ const About = () => {
                     <div className="grid md:grid-cols-3 gap-5 sm:gap-8">
                         {[
                             {
-                                title: "Stratejik Yaklaşım",
-                                text: "Her dosya için planlı, ölçülebilir ve öngörülebilir bir yol haritası sunarız."
+                                title: "Stratejik Avukatlık Hizmeti",
+                                text: "İstanbul avukat, süreçlerinizde en doğru stratejik yolları seçmeye çalışır, sürecinizde yardımcı olur."
                             },
                             {
-                                title: "Ekip Gücü",
-                                text: "Alanında deneyimli hukukçulardan oluşan ekibimizle birlikte hareket ederiz."
+                                title: "Deneyimli Avukat",
+                                text: "İstanbul avukat, malpraktis davaları, işçilik alacakları, ceza davaları, marka patent davaları başta olmak üzere pek çok alanda, alanında uzmanlaşmış avukatlarıyla hizmet eder."
                             },
                             {
-                                title: "Müvekkil Deneyimi",
-                                text: "Süreç boyunca erişilebilir olur, süreci şeffaf ve anlaşılır kurgularız."
+                                title: "İletişime Önem Veren Avukatlık",
+                                text: "İstanbul avukat, dosyalarında müvekkilleriyle iletişim kurar, durumu anlatır ve beklentileri normale çeker."
                             }
                         ].map((item) => (
                             <div

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LawFirmApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+255ee0e429520f979a8018d90e63f000ac618a88")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5a15f129c6e8c89dfd4fcc309ec16b2a6845489")]
 [assembly: System.Reflection.AssemblyProductAttribute("LawFirmApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LawFirmApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

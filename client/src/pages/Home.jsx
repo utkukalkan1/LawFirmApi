@@ -37,19 +37,17 @@ const Home = () => {
                             Güven • Şeffaflık • Sonuç Odaklılık
                         </div>
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
-                            Hukuki süreçlerde stratejik rehberlik sunan butik bir hukuk bürosu.
+                            Başta İstanbul’da olmak üzere, Türkiye’nin pek çok yerinde güçlü avukatlık hizmeti.
                         </h1>
                         <p className="text-base sm:text-lg text-slate-200 leading-relaxed">
-                            İstanbul merkezli ekibimiz; bireysel ve kurumsal müvekkiller için hızlı, anlaşılır ve
-                            güven veren çözümler üretir. Her dosyada detaylı analiz, güçlü iletişim ve şeffaf bir
-                            süreç yönetimi sunarız.
+                            Eser Hukuk ve Danışmanlık ile deneyimli avukatları, İstanbul merkezli bir hukuk bürosu olarak müvekkillerine başta sağlık hukuku ve malpraktis davaları, iş hukuku, ceza hukuku ile marka ve patent hukuku alanlarında hukuki danışmanlık ve dava takibi hizmeti sunmaktadır.
                         </p>
                         <div className="flex flex-wrap items-center gap-4">
                             <Link
                                 to="/contact"
                                 className="rounded-full bg-amber-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-amber-300/30"
                             >
-                                Hemen Görüşelim
+                                İletişime Geç
                             </Link>
                             <Link
                                 to="/articles"
@@ -61,9 +59,9 @@ const Home = () => {
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-8 sm:pt-10 text-sm text-slate-300">
                             {[
                                 { label: "Yıllık Tecrübe", value: "18+" },
-                                { label: "Aktif Dosya", value: "240+" },
-                                { label: "Başarı Oranı", value: "%92" },
-                                { label: "Müşteri Memnuniyeti", value: "4.9/5" }
+                                { value: "Yüzlerce Aktif Dosya" },
+                                { value: "Yüksek Memnuniyet" },
+                                { value: "Aktif ve Anlık İletişim" }
                             ].map((item) => (
                                 <div key={item.label} className="space-y-2">
                                     <div className="text-2xl font-semibold text-white">{item.value}</div>
@@ -159,7 +157,7 @@ const Home = () => {
                     <div className="space-y-2">
                         <h2 className="text-2xl sm:text-3xl font-semibold">İlk görüşmeyi planlayalım.</h2>
                         <p className="text-sm text-slate-700">
-                            Dosyanız için hızlı bir ön değerlendirme yapmak ve yol haritası çıkarmak için buradayız.
+                            Uzman avukatlarımızdan ön değerlendirme almak ya da hukuki danışmanlık randevusu oluşturmak için iletişime geçebilirsin.
                         </p>
                     </div>
                     <Link
